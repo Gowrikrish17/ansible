@@ -1,0 +1,9 @@
+---
+- name: Ansible plybook to install apache package
+  hosts: 172.31.5.80
+  become: yes
+  tasks:
+   - name: Install apache package httpd
+     apt:
+      name: apache2
+      state: present
